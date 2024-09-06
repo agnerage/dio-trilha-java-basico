@@ -1,42 +1,46 @@
-//Aplica o import do Scanner
+// Inclui o import do Scanner.
 
 import java.util.Scanner;
 
+
 public class ContaTerminal {
     public static void main(String[] args) {
+    
 
-        int Numero;
-        String Agencia;
-        String Cliente;
-        double Saldo;
+        int numero = 1021;
+        String agencia ="067-8";
+        String nomeCliente = "MARIO ANDRADE";
+        double saldo = 237.48;
 
         Scanner scanner = new Scanner(System.in);
         
-        //Pede a entrada dos dados ao usuário
+        // Pede a entrada dos dados ao usuário.
 
         System.out.println("Por favor, digite o número da Conta !");
-            Numero = scanner.nextInt();
-            scanner.nextLine(); 
+        numero = scanner.nextInt();
+        scanner.nextLine(); // Limpa o buffer do scanner.
 
-            System.out.println("Por favor, digite o número da Agência !");
-            Agencia = scanner.nextLine(); 
+        System.out.println("Por favor, digite o número da Agência !");
+        agencia = scanner.nextLine(); 
 
-            System.out.println("Por favor, digite o nome do Cliente !");
-            Cliente = scanner.nextLine(); 
+        System.out.println("Por favor, digite o nome do Cliente !");
+        nomeCliente = scanner.nextLine(); 
 
-            System.out.println("Por favor, digite o número do saldo !");
-            Saldo = scanner.nextDouble();
+        System.out.println("Por favor, digite o valor do saldo !");
+        saldo = scanner.nextDouble();
 
-            // Constroi a mensagem final sobre o status da conta
+        // Constroi a mensagem final sobre o status da conta e que ela foi criada.
+        String mensagem = "Olá ".concat(nomeCliente)
+        .concat(", obrigado por criar uma conta em nosso banco. Sua agência é ")
+        .concat(agencia)
+        .concat(", conta ")
+        .concat(String.valueOf(numero)) 
+        .concat(" e seu saldo de R$ ")
+        .concat(String.valueOf(saldo)) 
+        .concat(" já está disponível para saque.");
 
-            System.out.println("Olá ".concat(Cliente).concat(", ")
-                .concat(" obrigado por criar uma conta em nosso banco, sua agência é ")
-                .concat(Agencia).concat(", ")
-                .concat("conta ").concat(String.valueOf(Numero)).concat(" e seu saldo ")
-                .concat(String.valueOf(Saldo)).concat(" já está disponível para saque."));
+        System.out.println(mensagem);
 
-
-      
-    scanner.close();
+        scanner.close();
     }
 }
