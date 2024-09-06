@@ -24,13 +24,12 @@ public class ContaTerminal {
             Saldo = scanner.nextDouble();
 
             // Construir a mensagem final 
-            String mensagem = "Olá ".concat(Cliente).concat(", ")
+            System.out.println("Olá ".concat(Cliente).concat(", ")
                 .concat("obrigado por criar uma conta em nosso banco, sua agência é ")
                 .concat(Agencia).concat(", ")
                 .concat("conta ").concat(String.valueOf(Numero)).concat(" e seu saldo ")
-                .concat(String.valueOf(Saldo)).concat(" já está disponível para saque.");
+                .concat(String.valueOf(Saldo)).concat(" já está disponível para saque."));
 
-            System.out.println(mensagem);
 
       
     scanner.close();
