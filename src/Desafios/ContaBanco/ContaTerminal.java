@@ -1,3 +1,5 @@
+package ContaBanco;
+
 // Inclui o import do Scanner.
 
 import java.util.Scanner;
